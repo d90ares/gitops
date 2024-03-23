@@ -3,7 +3,7 @@
   "userGivenName": "dir-example",
   "destNamespace": "default",
   "destServer": "https://k8s-lab-apps-control-plane.d90ares.use1.k8g8.com",
-  "srcPath": "examples/demo-dir/",
+  "srcPath": "examples/demo-app/",
   "srcRepoURL": "https://github.com/argoproj-labs/argocd-autopilot.git",
   "srcTargetRevision": "",
   "labels": null,
