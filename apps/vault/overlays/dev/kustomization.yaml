@@ -6,12 +6,12 @@ resources:
 patches:
 - path: vault-patch.yaml
   target:
-  kind:
-  - ServiceAccount
-  - ConfigMap
-  - ClusterRoleBinding
-  - Service
-  - Deployment
-  - StatefulSet
-  - MutatingWebhookConfiguration
-  - Pod
+    kind:
+    - ServiceAccount
+    - ConfigMap
+    - ClusterRoleBinding
+    - Service
+    - Deployment
+    - StatefulSet
+    - MutatingWebhookConfiguration
+    - Pod
