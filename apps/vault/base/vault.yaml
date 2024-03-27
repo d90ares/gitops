@@ -338,7 +338,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: hashicorp-vault
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     app.kubernetes.io/name: vault
     app.kubernetes.io/instance: hashicorp-vault
@@ -531,7 +531,7 @@ webhooks:
     clientConfig:
       service:
         name: hashicorp-vault-agent-injector-svc
-        namespace: default
+        namespace: '{{ destNamespace }}'
         path: "/mutate"
       caBundle: ""
     rules:
@@ -551,7 +551,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: hashicorp-vault-server-test
-  namespace: default
+  namespace: '{{ destNamespace }}'
   annotations:
     "helm.sh/hook": test
 spec:
