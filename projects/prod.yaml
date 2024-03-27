@@ -47,7 +47,7 @@ spec:
           project: ""
   - git:
       files:
-      - path: apps/**/ibeers/config_dir.json
+      - path: apps/**/prod/config_dir.json
       repoURL: https://github.com/d90ares/gitops.git
       requeueAfterSeconds: 20
       revision: ""
@@ -69,7 +69,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: ibeers-{{ userGivenName }}
+      name: prod-{{ userGivenName }}
       namespace: argocd
     spec:
       destination:
@@ -80,7 +80,7 @@ spec:
         jsonPointers:
         - /status
         kind: Application
-      project: ibeers
+      project: prod
       source:
         path: '{{ srcPath }}'
         repoURL: '{{ srcRepoURL }}'
