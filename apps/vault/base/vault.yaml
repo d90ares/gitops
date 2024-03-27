@@ -4,7 +4,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: hashicorp-vault-agent-injector
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     app.kubernetes.io/name: vault-agent-injector
     app.kubernetes.io/instance: hashicorp-vault
@@ -15,7 +15,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: hashicorp-vault
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     helm.sh/chart: vault-0.27.0
     app.kubernetes.io/name: vault
@@ -27,7 +27,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: hashicorp-vault-config
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     helm.sh/chart: vault-0.27.0
     app.kubernetes.io/name: vault
@@ -101,7 +101,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: hashicorp-vault-agent-injector
-  namespace: default
+  namespace: '{{ destNamespace }}'
 ---
 # Source: vault/templates/server-clusterrolebinding.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -120,14 +120,14 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: hashicorp-vault
-  namespace: default
+  namespace: '{{ destNamespace }}'
 ---
 # Source: vault/templates/injector-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
   name: hashicorp-vault-agent-injector-svc
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     app.kubernetes.io/name: vault-agent-injector
     app.kubernetes.io/instance: hashicorp-vault
@@ -149,7 +149,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hashicorp-vault-internal
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     helm.sh/chart: vault-0.27.0
     app.kubernetes.io/name: vault
@@ -179,7 +179,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hashicorp-vault
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     helm.sh/chart: vault-0.27.0
     app.kubernetes.io/name: vault
@@ -209,7 +209,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hashicorp-vault-agent-injector
-  namespace: default
+  namespace: '{{ destNamespace }}'
   labels:
     app.kubernetes.io/name: vault-agent-injector
     app.kubernetes.io/instance: hashicorp-vault
