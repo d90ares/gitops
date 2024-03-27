@@ -3,5 +3,7 @@ kind: Kustomization
 resources:
 - ../../base
 
-patchesStrategicMerge:
-- vault-patch.yaml
+patches:
+- path: vault-patch.yaml
+  target:
+  namespace: default
