@@ -18,4 +18,4 @@ if grep -q "\- \"Chart.yaml\"" ../../base/kustomization.yaml; then
   sed -i 's/Chart.yaml/compiled-chart.yaml/g' ../../base/kustomization.yaml
 fi
 
-kustomize build
+/usr/local/bin/kustomize build
