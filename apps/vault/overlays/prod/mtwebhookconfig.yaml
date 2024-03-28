@@ -17,7 +17,7 @@ webhooks:
     clientConfig:
       service:
         name: hashicorp-vault-agent-injector-svc
-        prod
+        namespace: prod
         path: "/mutate"
       caBundle: ""
     rules:

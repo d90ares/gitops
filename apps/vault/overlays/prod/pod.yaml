@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: hashicorp-vault-server-test
-  prod
+  namespace: prod
   annotations:
     "helm.sh/hook": test
 spec:

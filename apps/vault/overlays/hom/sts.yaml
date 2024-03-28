@@ -4,7 +4,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: hashicorp-vault
-  hom
+  namespace: hom
   labels:
     app.kubernetes.io/name: vault
     app.kubernetes.io/instance: hashicorp-vault

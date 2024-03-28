@@ -6,4 +6,4 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: hashicorp-vault*
-  hom
+  namespace: hom
