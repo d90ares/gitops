@@ -1,6 +1,0 @@
-# Source: vault/templates/injector-service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: hashicorp-vault*
-  namespace: dev

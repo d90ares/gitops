@@ -1,7 +1,0 @@
----
-# Source: vault/templates/injector-serviceaccount.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: hashicorp-vault*
-  namespace: prod
