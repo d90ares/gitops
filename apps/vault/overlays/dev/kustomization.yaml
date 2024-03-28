@@ -6,33 +6,25 @@ resources:
 patches:
 - path: cm.yaml
   target:
-    kind:
-    - ConfigMap
+    kind: ConfigMap
 - path: crb.yaml
   target:
-    kind:
-    - ClusterRoleBinding
+    kind: ClusterRoleBinding
 - path: deployment.yaml
   target:
-    kind:
-    - Deployment
+    kind: Deployment
 - path: mtwebhookconfig.yaml
   target:
-    kind:
-    - MutatingWebhookConfiguration
+    kind: MutatingWebhookConfiguration
 - path: pod.yaml
   target:
-    kind:
-    - Pod
+    kind: Pod
 - path: sa.yaml
   target:
-    kind:
-    - ServiceAccount
+    kind: ServiceAccount
 - path: service.yaml
   target:
-    kind:
-    - Service
+    kind: Service
 - path: sts.yaml
   target:
-    kind:
-    - StatefulSet
+    kind: StatefulSet
