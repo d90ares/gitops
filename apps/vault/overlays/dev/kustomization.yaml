@@ -4,14 +4,35 @@ resources:
 - ../../base
 
 patches:
-- path: vault-patch.yaml
+- path: cm.yaml
+  target:
+    kind:
+    - ConfigMap
+- path: crb.yaml
+  target:
+    kind:
+    - ClusterRoleBinding
+- path: deployment.yaml
+  target:
+    kind:
+    - Deployment
+- path: mtwebhookconfig.yaml
+  target:
+    kind:
+    - MutatingWebhookConfiguration
+- path: pod.yaml
+  target:
+    kind:
+    - Pod
+- path: sa.yaml
   target:
     kind:
     - ServiceAccount
-    - ConfigMap
-    - ClusterRoleBinding
+- path: service.yaml
+  target:
+    kind:
     - Service
-    - Deployment
+- path: sts.yaml
+  target:
+    kind:
     - StatefulSet
-    - MutatingWebhookConfiguration
-    - Pod
