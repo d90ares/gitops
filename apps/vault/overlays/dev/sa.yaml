@@ -1,5 +1,24 @@
 ---
+# Source: vault/templates/injector-serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  name: hashicorp-vault-agent-injector
   namespace: dev
+  labels:
+    app.kubernetes.io/name: vault-agent-injector
+    app.kubernetes.io/instance: hashicorp-vault
+    app.kubernetes.io/managed-by: Helm
+---
+# Source: vault/templates/server-serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: hashicorp-vault
+  namespace: dev
+  labels:
+    helm.sh/chart: vault-0.27.0
+    app.kubernetes.io/name: vault
+    app.kubernetes.io/instance: hashicorp-vault
+    app.kubernetes.io/managed-by: Helm
+---
