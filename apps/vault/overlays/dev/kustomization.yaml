@@ -4,4 +4,3 @@ namespace: dev
 
 resources:
   - "namespace.yaml"
-  - "Chart.yaml"
