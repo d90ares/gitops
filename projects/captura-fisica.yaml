@@ -6,13 +6,13 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
-  name: ibeers
+  name: captura-fisica
   namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
-  description: ibeers project
+  description: c6pay captura fisica
   destinations:
   - namespace: '*'
     server: '*'
@@ -30,13 +30,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
   creationTimestamp: null
-  name: ibeers
+  name: servicos-satelites
   namespace: argocd
 spec:
   generators:
   - git:
       files:
-      - path: apps/**/ibeers/config.json
+      - path: apps/**/**/servicos-satelites/config.json
       repoURL: https://github.com/d90ares/gitops.git
       requeueAfterSeconds: 20
       revision: ""
@@ -69,7 +69,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: ibeers-{{ userGivenName }}
+      name: c6pay-transactions-{{ userGivenName }}
       namespace: argocd
     spec:
       destination:
@@ -80,7 +80,7 @@ spec:
         jsonPointers:
         - /status
         kind: Application
-      project: ibeers
+      project: captura-fisica
       source:
         path: '{{ srcPath }}'
         repoURL: '{{ srcRepoURL }}'
