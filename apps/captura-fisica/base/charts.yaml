@@ -1,0 +1,5 @@
+helmCharts:
+  - name: bazinga
+    repo: https://d90are.github.io/helm-charts
+    version: 1.0.0
+    valuesFile: values.yaml

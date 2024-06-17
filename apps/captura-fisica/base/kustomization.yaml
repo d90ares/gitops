@@ -1,14 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+helmGlobals:
+ chartHome: ../../charts
+
 resources:
+  - charts.yaml
   - ../../overlays/dev/**
   - ../../overlays/hom/**
   - ../../overlays/prod/**
-
-helmCharts:
-  - name: bazinga
-    repo: https://d90are.github.io/helm-charts
-    version: 1.0.0
-    valuesFile: values.yaml
 
