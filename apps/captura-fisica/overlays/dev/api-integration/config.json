@@ -1,6 +1,6 @@
 {
-  "appName": "demoapp",
-  "userGivenName": "demoapp",
+  "appName": "api-integration",
+  "userGivenName": "integration",
   "destNamespace": "dev",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/captura-fisica/overlays/dev/api-integration",
