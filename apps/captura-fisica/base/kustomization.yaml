@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../overlays/dev
-  - ../../overlays/hom
-  - ../../overlays/prod
+  - ../../overlays/dev/**
+  - ../../overlays/hom/**
+  - ../../overlays/prod/**
 
 helmCharts:
   - name: bazinga
