@@ -1,0 +1,4 @@
+replicas: 5
+image:
+  repository: nginx
+  tag: 1.19.10
