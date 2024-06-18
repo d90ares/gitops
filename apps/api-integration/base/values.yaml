@@ -8,4 +8,4 @@ replicaCount: 2
 
 image:
   repoitory: nginx
-  tag latest:
+  tag: latest
