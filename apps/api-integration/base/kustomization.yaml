@@ -1,25 +1,31 @@
+# resources:
+#   - values.yaml
+  
 helmGlobals:
   chartHome: charts/Bazinga-1.0.0
+
 
 helmCharts:
 - name: Bazinga
   includeCRDs: false
+
+  valuesFile: values.yaml
   
-  valuesInline:
-    service_name: teste
-    project_name: teste
-    product: teste
-    owner: teste
-    environment: dev
+  # valuesInline:
+  #   service_name: teste
+  #   project_name: teste
+  #   product: teste
+  #   owner: teste
+  #   environment: dev
 
-    replicaCount: 2
+  #   replicaCount: 2
 
-    image:
-      repository: nginx
-      tag: latest
+  #   image:
+  #     repository: nginx
+  #     tag: latest
 
-    containerPort: 80
-    pathHealthCheck: /healthz
+  #   containerPort: 80
+  #   pathHealthCheck: /healthz
 
   releaseName: moria
   version: 1.0.0

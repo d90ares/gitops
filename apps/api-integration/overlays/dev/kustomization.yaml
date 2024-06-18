@@ -1,0 +1,15 @@
+helmGlobals:
+  chartHome: ../../base/charts/Bazinga-1.0.0
+# namePrefix:  dev-
+# resources:
+# - ../../base
+
+
+
+helmCharts:
+- name: Bazinga
+  includeCRDs: false
+
+  valuesFile: values.yaml
+  releaseName: moria
+  version: 1.0.0

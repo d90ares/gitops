@@ -1,0 +1,14 @@
+service_name: overlay
+project_name: overlay
+product: overlay
+owner: overlay
+environment: dev
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: latest
+
+containerPort: 80
+pathHealthCheck: /healthz
