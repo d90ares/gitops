@@ -1,6 +1,6 @@
 {
-  "appName": "api-integration",
-  "userGivenName": "api-integration",
+  "appName": "api",
+  "userGivenName": "api",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/api-integration/overlays/dev/",
