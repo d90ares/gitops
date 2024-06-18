@@ -5,9 +5,10 @@ helmGlobals:
   chartHome: ../../charts
 
 helmCharts:
-  - name: bazinga
-    version: 1.0.0
-    repo: https://d90ares.github.io/helm-charts/bazinga
+  - name: cloudecho
+    version: 0.1.2
+    repo: https://echoyun.xyz/charts/
+    releaseName: hello-word
     namespace: default
     valuesFile: values.yaml
 
