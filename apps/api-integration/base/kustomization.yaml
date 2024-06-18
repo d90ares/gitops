@@ -1,8 +1,8 @@
 helmGlobals:
-  chartHome: charts
+  chartHome: charts/Bazinga-1.0.0
 
 helmCharts:
-- name: Bazinga-1.0.0
+- name: Bazinga
   includeCRDs: false
   
   valuesInline:
@@ -18,8 +18,12 @@ helmCharts:
       repository: nginx
       tag: latest
 
+    containerPortName:
+      enabled: false
+
     containerPort: 80
     pathHealthCheck: /healthz
+    
   releaseName: moria
   version: 1.0.0
   # repo: https://d90ares.github.io/helm-charts
