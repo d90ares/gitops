@@ -1,11 +1,12 @@
 {
-  "appName": "api-integration",
-  "userGivenName": "api-integration",
+  "appName": "api",
+  "userGivenName": "api",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/api-integration/overlays/dev/",
   "srcRepoURL": "https://github.com/d90ares/gitops.git",
-  "srcTargetRevision": "develop",
+  "srcTargetRevision": "refs/heads/develop",
+  "envName": "dev",
   "labels": null,
   "annotations": null
 }

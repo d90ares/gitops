@@ -36,7 +36,7 @@ spec:
   generators:
   - git:
       files:
-      - path: apps/**/dev/config.json
+      - path: apps/**/overlays/dev/config.json
       - path: apps/**/hom/config.json
       repoURL: https://github.com/d90ares/gitops.git
       requeueAfterSeconds: 20
@@ -70,7 +70,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: captura-fisica-{{ userGivenName }}
+      name: 'captura-fisica-{{ userGivenName }}-{{ envName }}'
       namespace: argocd
     spec:
       destination:
