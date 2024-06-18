@@ -14,8 +14,8 @@ helmCharts:
     replicaCount: 2
 
     image:
-      repoitory: nginx
-      tag: latest
+      repoitory: busibox
+      tag: "1.32.0"
   releaseName: moria
   version: 1.0.0
   repo: https://d90ares.github.io/helm-charts
