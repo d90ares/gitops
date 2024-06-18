@@ -5,10 +5,7 @@ helmGlobals:
   chartHome: ../../charts
 
 helmCharts:
-  - name: mysql
-    version: 9.4.0
-    repo: https://charts.bitnami.com/bitnami
-    releaseName: hello-word
+  - name: bazinga
     namespace: default
     valuesFile: values.yaml
 
