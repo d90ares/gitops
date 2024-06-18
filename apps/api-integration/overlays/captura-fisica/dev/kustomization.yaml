@@ -6,4 +6,4 @@ resources:
 
 # Se precisar sobrescrever algum valor específico para o ambiente dev
 patches:
-  - values.yaml
+  - path: values.yaml
