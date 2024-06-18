@@ -6,4 +6,7 @@ resources:
 
 # Se precisar sobrescrever algum valor específico para o ambiente dev
 patches:
-  - path: values.yaml
+  - target:
+      kind: ConfigMap
+      name: api-integration-config
+    path: values.yaml
