@@ -36,7 +36,7 @@ spec:
   generators:
   - git:
       files:
-      - path: apps/**/overlays/dev/config.json
+      - path: apps/**/dev/config.json
       - path: apps/**/hom/config.json
       repoURL: https://github.com/d90ares/gitops.git
       requeueAfterSeconds: 20
