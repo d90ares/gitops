@@ -40,9 +40,7 @@ image:
 # -- Porta que a aplicação rodará
 containerPort:
 # -- Nome da porta que a aplicação rodará - https://istio.io/v1.0/docs/setup/kubernetes/spec-requirements/
-containerPortName:
-  enabled: false
-  name: http
+containerPortName: http
 
 # -- Seleção de hosts onde a aplicação rodará
 nodeSelector: {}
