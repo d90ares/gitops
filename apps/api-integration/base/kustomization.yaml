@@ -5,9 +5,9 @@ helmGlobals:
   chartHome: ../../charts
 
 helmCharts:
-  - name: my-hello
-    version: 0.1.2
-    repo: https://cloudecho.github.io/charts/
+  - name: bazinga
+    version: 1.0.0
+    repo: https://d90ares.github.io/helm-charts
     namespace: default
-    valuesFile: values.yaml
+    # valuesFile: values.yaml
 
