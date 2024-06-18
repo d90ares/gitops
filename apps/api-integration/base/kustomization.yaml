@@ -2,8 +2,9 @@ helmGlobals:
   chartHome: charts
 
 helmCharts:
-- name: Bazinga
+- name: Bazinga-1.0.0
   includeCRDs: false
+  
   valuesInline:
     service_name: teste
     project_name: teste
