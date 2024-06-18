@@ -1,0 +1,13 @@
+service_name: api-integration 
+
+project_name: captura-fisica
+
+product: c6pay
+
+owner: at-cf
+
+environment: dev
+
+image:
+  repository: nginx
+  tag: latest

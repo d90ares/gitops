@@ -1,4 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-- github.com/argoproj-labs/argocd-autopilot/examples/demo-app/
+
+helmGlobals:
+  chartHome: ../../charts
+
+helmCharts:
+  - name: bazinga
+    version: 1.0.0
+    repo: https://d90ares.github.io/helm-charts
+    namespace: default
+    valuesFile: values.yaml
+
