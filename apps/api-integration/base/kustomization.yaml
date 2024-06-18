@@ -7,7 +7,7 @@ helmGlobals:
 helmCharts:
   - name: bazinga
     version: 1.0.0
-    repo: https://d90ares.github.io/helm-charts
+    repo: https://d90ares.github.io/helm-charts/bazinga
     namespace: default
     valuesFile: values.yaml
 
