@@ -16,6 +16,9 @@ helmCharts:
     image:
       repository: nginx
       tag: latest
+
+    containerPort: 80
+    pathHealthCheck: /healthz
   releaseName: moria
   version: 1.0.0
-  repo: https://d90ares.github.io/helm-charts
+  # repo: https://d90ares.github.io/helm-charts
