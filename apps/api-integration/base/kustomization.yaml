@@ -1,9 +1,21 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - ../charts/templates/
-  - values.yaml
-patches:
-  - path: values.yaml
-    target:
-      kind: Values
+helmGlobals:
+  chartHome: charts
+
+helmCharts:
+- name: Bazinga
+  includeCRDs: false
+  valuesInline:
+    service_name: teste
+    project_name: teste
+    product: teste
+    owner: teste
+    environment: dev
+
+    replicaCount: 2
+
+    image:
+      repoitory: nginx
+      tag: latest
+  releaseName: moria
+  version: 1.0.0
+  repo: https://d90ares.github.io/helm-charts
