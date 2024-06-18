@@ -1,3 +1,11 @@
+service_name: teste
+project_name: teste
+product: teste
+owner: teste
+environment: dev
+
+replicaCount: 2
+
 image:
-  repository: nginx
-  tag: latest
+  repoitory: nginx
+  tag latest:
