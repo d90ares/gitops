@@ -111,9 +111,6 @@ spec:
           failureThreshold: {{ .Values.healthCheck.failureThresholdHealthCheck }}
           httpGet:
             path: {{ .Values.healthCheck.pathHealthCheck }}
-            {{- if .Values.containerPortName.enabled }}
-            port: {{ .Values.containerPortName.name }}
-            {{- end }}
             port: {{ .Values.containerPort }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.healthCheck.initialDelayHealthCheck }}
@@ -124,9 +121,6 @@ spec:
           failureThreshold: {{ .Values.healthCheck.failureThresholdHealthCheck }}
           httpGet:
             path: {{ .Values.healthCheck.pathHealthCheck }}
-            {{- if .Values.containerPortName.enabled }}
-            port: {{ .Values.containerPortName.name }}
-            {{- end }}
             port: {{ .Values.containerPort }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.healthCheck.initialDelayHealthCheck }}
