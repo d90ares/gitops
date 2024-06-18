@@ -1,5 +1,5 @@
 helmGlobals:
-  chartHome: ../../base/charts/Bazinga-1.0.0
+  chartHome: ../../../../apps/charts/Bazinga-1.0.0
 # namePrefix:  dev-
 # resources:
 # - ../../base
@@ -13,3 +13,4 @@ helmCharts:
   valuesFile: values.yaml
   releaseName: moria
   version: 1.0.0
+  # repo: https://d90ares.github.io/helm-charts

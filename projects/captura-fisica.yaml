@@ -70,7 +70,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: captura-fisica-{{ userGivenName }}
+      name: captura-fisica-{{ userGivenName }}-{{ env }}
       namespace: argocd
     spec:
       destination:
