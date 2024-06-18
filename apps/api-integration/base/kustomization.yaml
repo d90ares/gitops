@@ -5,9 +5,9 @@ helmGlobals:
   chartHome: ../../charts
 
 helmCharts:
-  - name: cloudecho
-    version: 0.1.2
-    repo: https://echoyun.xyz/charts/
+  - name: mysql
+    version: 9.4.0
+    repo: https://charts.bitnami.com/bitnami
     releaseName: hello-word
     namespace: default
     valuesFile: values.yaml
