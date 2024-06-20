@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
-  name: captura-fisica
+  name: Bazinga Project
   namespace: argocd
 spec:
   clusterResourceWhitelist:
