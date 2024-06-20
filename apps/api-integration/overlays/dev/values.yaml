@@ -1,7 +1,7 @@
-service_name: api-intregation
-project_name: captura-fisica
-product: c6pay
-owner: at-cf
+service_name: bazinga-service
+project_name: bazinga-project
+product: Bazinga
+owner: d90ares
 environment: dev
 
 replicaCount: 1
