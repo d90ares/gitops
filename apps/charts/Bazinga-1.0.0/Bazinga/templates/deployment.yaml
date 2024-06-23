@@ -13,8 +13,8 @@ metadata:
     version: {{ .Values.image.tag | quote }}
     owner: {{ required "Adicione o valor 'owner' no arquivo blueprint-chart-variables.yaml do seu projeto. Este valor é obrigatório." .Values.owner }}
   annotations:
-    configmap.reloader.stakater.com/reload: ""{{ .Values.service_name }}-{{ .Values.environment }}"-{{ .Values.environment }}" 
-    secret.reloader.stakater.com/reload: ""{{ .Values.service_name }}-{{ .Values.environment }}"-{{ .Values.environment }}"
+    configmap.reloader.stakater.com/reload: "{{ .Values.service_name }}-{{ .Values.environment }}" 
+    secret.reloader.stakater.com/reload: "{{ .Values.service_name }}-{{ .Values.environment }}"
     {{- if .Values.deployment.annotations }}
     {{- toYaml .Values.deployment.annotations | nindent 4 }}
     {{- end }}
