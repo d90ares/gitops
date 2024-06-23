@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: {{ required "Adicione o valor 'service_name' no arquivo blueprint-chart-variables.yaml do seu projeto. Este valor é obrigatório." .Values.service_name }}
   labels:
-    app: {{ .Values.service_name }}-{{ .Values.environment }}
+    app: "{{ .Values.service_name }}-{{ .Values.environment }}"
     environment: {{ .Values.environment }}
     app.kubernetes.io/managed-by: helm
-    app.kubernetes.io/name: {{ .Values.service_name }}-{{ .Values.environment }}
+    app.kubernetes.io/name: "{{ .Values.service_name }}-{{ .Values.environment }}"
     app.kubernetes.io/version: {{ .Values.image.tag | quote }}
     app.kubernetes.io/part-of: {{ required "Adicione o valor 'project_name' no arquivo blueprint-chart-variables.yaml do seu projeto. Este valor é obrigatório." .Values.project_name }}
     product:  {{ required "Adicione o valor 'product' no arquivo blueprint-chart-variables.yaml do seu projeto. Este valor é obrigatório." .Values.product }}
     version: {{ .Values.image.tag | quote }}
     owner: {{ required "Adicione o valor 'owner' no arquivo blueprint-chart-variables.yaml do seu projeto. Este valor é obrigatório." .Values.owner }}
   annotations:
-    configmap.reloader.stakater.com/reload: "{{ .Values.service_name }}-{{ .Values.environment }}" 
-    secret.reloader.stakater.com/reload: "{{ .Values.service_name }}-{{ .Values.environment }}"
+    configmap.reloader.stakater.com/reload: ""{{ .Values.service_name }}-{{ .Values.environment }}"-{{ .Values.environment }}" 
+    secret.reloader.stakater.com/reload: ""{{ .Values.service_name }}-{{ .Values.environment }}"-{{ .Values.environment }}"
     {{- if .Values.deployment.annotations }}
     {{- toYaml .Values.deployment.annotations | nindent 4 }}
     {{- end }}
@@ -31,23 +31,23 @@ spec:
     {{- end }}
   selector:
     matchLabels:
-      app: {{ .Values.service_name }}-{{ .Values.environment }}
+      app: "{{ .Values.service_name }}-{{ .Values.environment }}"
       environment: {{ .Values.environment }}
   revisionHistoryLimit: 5
   template:
     metadata:
       labels:
-        app: {{ .Values.service_name }}-{{ .Values.environment }}
+        app: "{{ .Values.service_name }}-{{ .Values.environment }}"
         environment: {{ .Values.environment }}
         app.kubernetes.io/managed-by: helm
-        app.kubernetes.io/name: {{ .Values.service_name }}-{{ .Values.environment }}
+        app.kubernetes.io/name: "{{ .Values.service_name }}-{{ .Values.environment }}"
         app.kubernetes.io/version: {{ .Values.image.tag | quote }}
         app.kubernetes.io/part-of: {{  .Values.project_name }}
         product:  {{ .Values.product }}
         version: {{ .Values.image.tag | quote }}
         owner: {{ .Values.owner }}
     spec:
-      serviceAccountName: {{ .Values.service_name }}-{{ .Values.environment }}
+      serviceAccountName: "{{ .Values.service_name }}-{{ .Values.environment }}"
       terminationGracePeriodSeconds: 20
       {{- if .Values.tolerations }}
       tolerations:
@@ -67,7 +67,7 @@ spec:
                 - key: app
                   operator: In
                   values:
-                  - {{ .Values.service_name }}-{{ .Values.environment }}
+                  - "{{ .Values.service_name }}-{{ .Values.environment }}"
               topologyKey: failure-domain.beta.kubernetes.io/zone
             weight: 100
           - podAffinityTerm:
@@ -76,7 +76,7 @@ spec:
                 - key: app
                   operator: In
                   values:
-                  - {{ .Values.service_name }}-{{ .Values.environment }}
+                  - "{{ .Values.service_name }}-{{ .Values.environment }}"
               topologyKey: kubernetes.io/hostname
             weight: 90
       {{- end }}
@@ -91,7 +91,7 @@ spec:
       {{- end }}
       {{- end }}
       containers:
-      - name: {{ .Values.service_name }}-{{ .Values.environment }}
+      - name: "{{ .Values.service_name }}-{{ .Values.environment }}"
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         {{- if .Values.deployment.entrypoint.command }}
@@ -137,11 +137,11 @@ spec:
         envFrom:
         {{- if .Values.env }}
         - configMapRef:
-            name: {{ .Values.service_name }}-{{ .Values.environment }}
+            name: "{{ .Values.service_name }}-{{ .Values.environment }}"
         {{- end }}   
         {{- if .Values.vault.enabled }}
         - secretRef:
-            name: {{ .Values.service_name }}-{{ .Values.environment }}
+            name: "{{ .Values.service_name }}-{{ .Values.environment }}"
         {{- end }}
         {{- range .Values.addExternalConfigmaps }}
         - configMapRef:
