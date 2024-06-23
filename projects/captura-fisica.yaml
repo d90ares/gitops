@@ -6,9 +6,10 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
-  name: captura-fisica
+  name: bazinga-project
   namespace: argocd
 spec:
+  targetRevision:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
@@ -30,7 +31,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
   creationTimestamp: null
-  name: captura-fisica
+  name: bazinga-applicationset
   namespace: argocd
 spec:
   generators:
@@ -70,7 +71,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: 'captura-fisica-{{ userGivenName }}-{{ envName }}'
+      name: 'bazinga-project-{{ userGivenName }}-{{ envName }}'
       namespace: argocd
     spec:
       destination:
@@ -81,7 +82,7 @@ spec:
         jsonPointers:
         - /status
         kind: Application
-      project: captura-fisica
+      project: bazinga-project
       source:
         path: '{{ srcPath }}'
         repoURL: '{{ srcRepoURL }}'
