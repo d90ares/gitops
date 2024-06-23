@@ -1,0 +1,14 @@
+service_name: saturn
+project_name: bazinga-project
+product: solar-system
+owner: at-ss
+environment: hom
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: latest
+
+containerPort: 80
+pathHealthCheck: /healthz
