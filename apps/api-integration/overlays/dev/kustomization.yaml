@@ -4,11 +4,6 @@ helmGlobals:
 # resources:
 # - ../../base
 
-commonLabels: {
-  '{{ labels }}'
-}
-  
-
 helmCharts:
 - name: Bazinga
   includeCRDs: false
