@@ -5,10 +5,8 @@ helmGlobals:
 # - ../../base
 
 commonLabels: {
-  '{{ labels }}'
+  {'{{ labels }}'}
 }
-
-labelWithoutSelector: true
 
 helmCharts:
 - name: Bazinga
