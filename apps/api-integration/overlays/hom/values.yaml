@@ -1,4 +1,4 @@
-service_name: saturn
+service_name: saturn-{{ .Values.environment }}
 project_name: bazinga-project
 product: solar-system
 owner: at-ss
