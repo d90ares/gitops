@@ -7,6 +7,10 @@
   "srcRepoURL": "https://github.com/d90ares/gitops.git",
   "envName": "dev",
   "srcTargetRevision": "refs/heads/develop",
-  "labels": null,
+  "labels": {
+    "app.kubernetes.io/managed-by": "argocd-autopilot",
+    "app.kubernetes.io/name": "{{ appName }}",
+    "env": "{{ envName }}"
+  },
   "annotations": null
 }
