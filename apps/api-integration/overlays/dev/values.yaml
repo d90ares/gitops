@@ -1,7 +1,7 @@
-service_name: api-intregation
-project_name: captura-fisica
-product: c6pay
-owner: at-cf
+service_name: marte
+project_name: bazinga-project
+product: solar-system
+owner: at-ss
 environment: dev
 
 replicaCount: 1
