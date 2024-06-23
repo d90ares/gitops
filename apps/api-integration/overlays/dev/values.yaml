@@ -1,7 +1,7 @@
-service_name: bazinga-service
+service_name: marte
 project_name: bazinga-project
-product: Bazinga
-owner: d90ares
+product: solar-system
+owner: at-ss
 environment: dev
 
 replicaCount: 2

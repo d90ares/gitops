@@ -9,6 +9,7 @@ metadata:
   name: bazinga-project
   namespace: argocd
 spec:
+  targetRevision:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
