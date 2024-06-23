@@ -69,7 +69,7 @@ spec:
   template:
     metadata:
       labels:
-        {'{{ labels }}'}
+        '{{ labels }}'
       name: 'bazinga-project-{{ userGivenName }}-{{ envName }}'
       namespace: argocd
     spec:
