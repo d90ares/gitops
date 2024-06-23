@@ -71,6 +71,7 @@ spec:
       labels:
         "app.kubernetes.io/managed-by": "argocd-autopilot"
         "app.kubernetes.io/name": "{{ appName }}"
+        {'{{ labels }}'}: null
       name: 'bazinga-project-{{ userGivenName }}-{{ envName }}'
       namespace: argocd
     spec:
