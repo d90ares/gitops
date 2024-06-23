@@ -1,0 +1,16 @@
+helmGlobals:
+  chartHome: ../../../../apps/charts/Bazinga-1.0.0
+# namePrefix:  dev-
+# resources:
+# - ../../base
+
+
+
+helmCharts:
+- name: Bazinga
+  includeCRDs: false
+
+  valuesFile: values.yaml
+  releaseName: moria
+  version: 1.0.0
+  # repo: https://d90ares.github.io/helm-charts
