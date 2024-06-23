@@ -1,4 +1,4 @@
-service_name: marte-{{ .environment }}
+service_name: marte
 project_name: bazinga-project
 product: solar-system
 owner: at-ss
