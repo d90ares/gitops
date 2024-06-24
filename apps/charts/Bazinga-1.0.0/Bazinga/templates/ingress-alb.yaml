@@ -1,13 +1,14 @@
 {{- if and ( eq  .Values.ingress.enabled true ) ( eq .Values.ingress.type "alb" ) }}
-{{- $Name := default .Values.service_name }}
+{{- $Comp :=  printf "%s-%s" .Values.service_name .Values.environment }}
+{{- $Name := default $Comp}}
 {{- $containerPortName := default .Values.containerPortName }}
 {{- $root := . -}}
 apiVersion: {{ include "ingress.apiVersion" . }}
 kind: Ingress
 metadata:
-  name: {{ .Values.service_name }}
+  name: {{ printf "%s-%s" .Values.service_name .Values.environment | quote }}
   labels:
-    app: {{ .Values.service_name }}
+    app: {{ printf "%s-%s" .Values.service_name .Values.environment | quote }}
     environment:  {{ .Values.environment }}
   annotations:
     {{- if .Values.ingress.acmArn }}
