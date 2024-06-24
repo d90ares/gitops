@@ -2,7 +2,7 @@
 apiVersion: {{ include "hpa.apiVersion" . }}
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ .Values.service_name }}
+  name: {{ printf "%s-%s" .Values.service_name .Values.environment | quote }}
   labels:
     app: {{ .Values.service_name | quote }}
     environment: {{ .Values.environment | quote }}

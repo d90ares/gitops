@@ -4,8 +4,6 @@ helmGlobals:
 # resources:
 # - ../../base
 
-
-
 helmCharts:
 - name: Bazinga
   includeCRDs: false

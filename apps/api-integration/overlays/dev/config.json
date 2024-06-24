@@ -1,6 +1,6 @@
 {
-  "appName": "bazinga-service",
-  "userGivenName": "bazinga-servicen",
+  "appName": "marte",
+  "userGivenName": "bazinga-service",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/api-integration/overlays/dev/",
