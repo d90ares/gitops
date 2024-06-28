@@ -48,7 +48,7 @@ spec:
           destination: {}
           project: ""
           imagePullSecrets:
-          - name: my-ecr-creds
+          - name: aws-ecr-credentials
   - git:
       files:
       - path: apps/**/captura-fisica/config_dir.json
@@ -68,7 +68,7 @@ spec:
               recurse: true
             repoURL: ""
           imagePullSecrets:
-          - name: my-ecr-creds
+          - name: aws-ecr-credentials
   syncPolicy: {}
   template:
     metadata:
