@@ -7,8 +7,8 @@ environment: dev
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: latest
+  repository: 000000000000.dkr.ecr.us-east-1.localhost.localstack.cloud:4566/ibeers-repo/ibeers
+  tag: v1.0.0
 
 containerPort: 80
 pathHealthCheck: /healthz
