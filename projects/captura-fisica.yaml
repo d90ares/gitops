@@ -47,6 +47,8 @@ spec:
         spec:
           destination: {}
           project: ""
+          imagePullSecrets:
+          - name: my-ecr-creds
   - git:
       files:
       - path: apps/**/captura-fisica/config_dir.json
@@ -65,6 +67,8 @@ spec:
               jsonnet: {}
               recurse: true
             repoURL: ""
+          imagePullSecrets:
+          - name: my-ecr-creds
   syncPolicy: {}
   template:
     metadata:
@@ -93,6 +97,4 @@ spec:
           allowEmpty: true
           prune: true
           selfHeal: true
-      imagePullSecrets:
-        - name: my-ecr-creds
 status: {}
