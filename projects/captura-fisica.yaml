@@ -93,4 +93,6 @@ spec:
           allowEmpty: true
           prune: true
           selfHeal: true
+      imagePullSecrets:
+        - name: my-ecr-creds
 status: {}
