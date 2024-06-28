@@ -48,7 +48,7 @@ spec:
           destination: {}
           project: ""
           imagePullSecrets:
-          - name: aws-ecr-credentials
+          - name: localstack-aws-secret
   - git:
       files:
       - path: apps/**/captura-fisica/config_dir.json
@@ -68,7 +68,7 @@ spec:
               recurse: true
             repoURL: ""
           imagePullSecrets:
-          - name: aws-ecr-credentials
+          - name: localstack-aws-secret
   syncPolicy: {}
   template:
     metadata:
